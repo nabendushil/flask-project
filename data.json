@@ -1,0 +1,50 @@
+[
+    {
+        "date": "30-03-2026 11:35",
+        "names": [
+            "Nirmallya Shil",
+            "Narayan Ch. Shil",
+            "Gopal Ch. Sarkar"
+        ],
+        "addresses": [
+            "Jyotinagar, Phansidewa",
+            "Jyotinagar, Phansidewa",
+            "Jyotinagar, Phansidewa"
+        ],
+        "familycode": [
+            "004417144700",
+            "000005193400",
+            "001159917000"
+        ],
+        "amounts": [
+            1100,
+            530,
+            60
+        ],
+        "total": 1690
+    },
+    {
+        "date": "30-03-2026 11:48",
+        "names": [
+            "Nirmallya Shil",
+            "Narayan Ch. Shil",
+            "Gopal Ch. Sarkar"
+        ],
+        "addresses": [
+            "Jyotinagar, Phansidewa",
+            "Jyotinagar, Phansidewa",
+            "Jyotinagar, Phansidewa"
+        ],
+        "familycode": [
+            "004417144700",
+            "000005193400",
+            "001159917000"
+        ],
+        "amounts": [
+            1100,
+            0,
+            11
+        ],
+        "total": 1111
+    }
+]

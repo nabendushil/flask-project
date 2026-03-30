@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Storage</title>
+<style>
+body {
+    font-family: Arial;
+    background: #eef2f3;
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 90%;
+    background: white;
+}
+
+th {
+    background: #667eea;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h2>SATSANG PHILANTHROPY, SATSANG DEOGHAR</h2>
+
+<button onclick="location.href='/'">🏠 Home</button>
+
+{% for item in data %}
+<hr>
+
+<p><b>Date:</b> {{item.date}}</p>
+
+<table>
+<tr>
+<th>Srl</th>
+<th>Name</th>
+<th>Address</th>
+<th>Family Code</th>
+<th>Amount</th>
+</tr>
+
+{% for i in range(item.names|length) %}
+<tr>
+<td>{{i+1}}</td>
+<td>{{item.names[i]}}</td>
+
+<td>
+{% if i>0 and item.addresses[i]==item.addresses[i-1] %}
+"
+{% else %}
+{{item.addresses[i]}}
+{% endif %}
+</td>
+
+<td>{{item.familycode[i]}}</td>
+<td>{{item.amounts[i]}}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+<p><b>Total:</b> {{item.total}}</p>
+
+<a href="/download/{{loop.index0}}">
+<button style="background:green;color:white;">Download</button>
+</a>
+
+<a href="/delete/{{loop.index0}}">
+<button style="background:red;color:white;">Delete</button>
+</a>
+
+{% endfor %}
+
+</body>
+</html>

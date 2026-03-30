@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Create</title>
+<style>
+body {
+    font-family: Arial;
+    background: #f5f7fa;
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Enter Amounts</h2>
+
+<form method="post">
+
+{% for name in names %}
+    <p>{{name}}</p>
+    <input type="text" name="{{name}}">
+{% endfor %}
+
+<br><br>
+
+<button type="submit">Save List</button>
+
+</form>
+
+<br>
+
+<button onclick="location.href='/'">🏠 Home</button>
+
+</body>
+</html>
